@@ -21,7 +21,7 @@ When you run the executable `--help` the following help appears.
         --help          - to get this screen.
         --debug-log     - shows a verbous output of startup and all requests.
         --output-json   - outputs the configuration JSON to the console that was passed in.
-        --port          - sets the port to run the server on. Defaults to 5000.``
+        --port          - sets the port to run the server on. Defaults to 5000.
 
 There is also an `exampleConfig.json` that you can build upon.  You'll need to use a site like https://www.base64encode.org/ to encode your <username>:<password> so that you can Basic Auth into your instance of JIRA.
     
