@@ -10,7 +10,7 @@ To build just run the following command:
 
 To install the Node application run `npm install` and to run the server run `npm run server`.
 
-This node app contains copy of the branch in [LeanSheets](https://github.com/paulsjv/leansheets).
+This node app contains copy of the branch `dist` in [LeanSheets](https://github.com/paulsjv/leansheets/tree/dist).
 
 When you run the executable `--help` the following help appears.
 
