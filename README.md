@@ -25,4 +25,6 @@ When you run the executable `--help` the following help appears.
 
 There is also an `exampleConfig.json` that you can build upon.  You'll need to use a site like https://www.base64encode.org/ to encode your <username>:<password> so that you can Basic Auth into your instance of JIRA.
     
+After you start the application browse to http://localhost:5000 to have it load.
+    
 If you have any issues please add them the the issues here.
