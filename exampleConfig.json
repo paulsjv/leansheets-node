@@ -19,7 +19,8 @@
                             "startAt": "0",
                             "maxResults": "50",
                             "method": "GET",
-                            "url": "/rest/agile/1.0/board/{boardId}/sprint"
+                            "url": "/rest/agile/1.0/board/{boardId}/sprint",
+			    "jql": ""
                         },
                         "issues": {
                             "startAt": "0",
@@ -28,13 +29,37 @@
                             "url": "/rest/agile/1.0/sprint/{sprintId}/issue",
                             "expand": "changelog",
                             "fields": "summary,issuetype,resolutiondate,created,project,labels",
+			    "jql": "",
                             "timeout": 180000
+                        }
+                    }
+                },
+		"issues": {
+                    "config": {
+                        "startAt": "0",
+                        "maxResults": "25",
+                        "method": "GET",
+                        "getSubtasks": true,
+                        "url": "/rest/api/2/search",
+                        "jql": "",
+                        "expand": "changelog",
+                        "fields": "summary,issuetype,resolutiondate,created,project,labels",
+                        "timeout": 180000
+                    }
+                },
+                "issue": {
+                    "config": {
+                        "url": "/rest/api/2/issue/{key}",
+                        "expand": "changelog",
+                        "fields": "summary,issuetype,resolutiondate,created,project,labels",
+                        "subtasks": {
+                            "url": "/subtask"
                         }
                     }
                 }
             }
         },
-		"IC - Sid": {
+	"IC - Sid": {
             "dataSource": "jira",
             "leadTimeStartStatuses": ["In Progress","Dev Complete","In Testing","Ready for Demo"],
             "leadTimeEndStatuses": ["Done"],
@@ -53,7 +78,7 @@
                         "method": "GET",
                         "getSubtasks": true,
                         "url": "/rest/api/2/search",
-                        "jql": "assignee = siddhartha.guli and issuetype = Story and (resolved >= '{startDate}' and resolved <= '{endDate}')",
+                        "jql": "assignee = username and issuetype = Story and (resolved >= '{startDate}' and resolved <= '{endDate}')",
                         "expand": "changelog",
                         "fields": "summary,issuetype,resolutiondate,created,project,labels",
                         "timeout": 180000
